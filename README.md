@@ -4,9 +4,6 @@ Acest repository conține documentația necesară pentru dezvoltarea aplicației
 
 ## Conținut
 
-- Cerințe funcționale
-- Arhitectură
-- Specificații tehnice
-- Diagrame și fluxuri logice
+- Folder cu diverse formate de cod/text dedicat utialajelor CNC de frezare
 
 Scopul este definirea clară a structurii și comportamentului aplicației.
