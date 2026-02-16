@@ -63,3 +63,14 @@
 3. Normalizați unitățile (mm vs inch/conversii implicite).
 4. Construiți un set de teste de regresie folosind aceste fișiere ca corpus minim.
 5. Prioritizați fișierele mari (`.cix`, `.mpr`) pentru testare de robustețe și performanță.
+
+## Re-gândire arhitecturală (aliniată cu `Docs/Framework.md`)
+
+Arhitectura recomandată pentru implementare este acum formalizată în `Docs/Arhitectura_Codebase.md` și se bazează pe:
+
+1. Front-end separat per dialect CNC.
+2. Convergență obligatorie în `CanonicalMotionStream` (nivel cinematic atomic).
+3. Expander dedicat doar pentru formatele declarative (`OperationGraph -> motion`).
+4. Motor de backplot complet agnostic de dialect.
+
+Această structură elimină riscul de parser monolitic și permite adăugarea dialectelor noi prin module noi, fără modificări invazive în engine.
